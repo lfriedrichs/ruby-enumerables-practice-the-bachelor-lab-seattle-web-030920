@@ -28,7 +28,7 @@ def get_occupation(data, hometown)
       array = contestants.select {|contestant| 
        contestant["hometown"] == hometown}
        if !array.empty?
-         occupation = contestant["occupation"] 
+         occupation = array[0]["occupation"] 
        end
   }
   occupation
