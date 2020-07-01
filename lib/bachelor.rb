@@ -14,7 +14,12 @@ def get_contestant_name(data, occupation)
 end
 
 def count_contestants_by_hometown(data, hometown)
-  # code here
+      count = 0
+  data.each {|season, contestants| 
+      contestants.each {|contestant| 
+        count += 1 if contestant["hometown"] == hometown}
+  }
+  count
 end
 
 def get_occupation(data, hometown)
