@@ -1,9 +1,11 @@
 def get_first_name_of_season_winner(data, season)
-  
+  contestant = data[season].select {|contestant|
+  contestant["status"] == "Winner"}
+  contestant["name"].split(' ')[0]
 end
 
 def get_contestant_name(data, occupation)
-  "Carly Waddell"
+  # code here
 end
 
 def count_contestants_by_hometown(data, hometown)
