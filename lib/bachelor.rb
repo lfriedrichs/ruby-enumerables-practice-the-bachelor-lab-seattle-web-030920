@@ -25,8 +25,11 @@ end
 def get_occupation(data, hometown)
     occupation = ''
   data.each {|season, contestants| 
-      contestants.each {|contestant| 
-        occupation = contestant["occupation"] if contestant["hometown"] == hometown}
+      array = contestants.select {|contestant| 
+       contestant["hometown"] == hometown}
+       if !array.empty?
+         occupation = contestant["occupation"] 
+       end
   }
   occupation
 end
