@@ -3,8 +3,7 @@ def get_first_name_of_season_winner(data, season)
 end
 
 def get_contestant_name(data, occupation)
-  data.each {|season| 
-    name = season[name]season[occupation] == occupation
+  # code here
 end
 
 def count_contestants_by_hometown(data, hometown)
