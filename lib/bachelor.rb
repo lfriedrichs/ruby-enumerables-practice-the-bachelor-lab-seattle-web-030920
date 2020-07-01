@@ -30,7 +30,7 @@ def get_average_age_for_season(data, season)
     ages = []
   data.each {|season, contestants| 
       contestants.each {|contestant| 
-        ages << contestant["age"].to_i}
+        ages << contestant["age"].to_f}
   }
   sum = ages.sum
   average = sum / ages.length
