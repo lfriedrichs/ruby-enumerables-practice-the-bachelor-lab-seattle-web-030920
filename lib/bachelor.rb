@@ -1,7 +1,7 @@
 def get_first_name_of_season_winner(data, season)
   contestant = data[season].select {|contestant|
   contestant["status"] == "Winner"}
-  contestant["name"]
+  contestant[0]["name"]
 end
 
 def get_contestant_name(data, occupation)
