@@ -34,5 +34,5 @@ def get_average_age_for_season(data, season)
   }
   sum = ages.sum
   average = sum / ages.length
-  average.roundup()
+  average.ceil
 end
