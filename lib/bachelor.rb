@@ -6,7 +6,7 @@ end
 
 def get_contestant_name(data, occupation)
   data.each {|season| 
-    season.each {|contestants| 
+    season.each {|season, contestants| 
       contestants.each {|contestant| 
         name = contestant["name"] if contestant["occupation"] == occupation}
     }
